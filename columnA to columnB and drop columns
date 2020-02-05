@@ -1,0 +1,16 @@
+df['cloumnA'] = df['cloumnA'].astype(float)
+cloumnA_dict = ['cloumnA']
+for cloumnA in cloumnA_dict:
+    df['cloumnB']=np.nan
+    condition = (df[cloumnA]>=1) & (df[cloumnA]<=1.5)  #>=1 & <=1.5的結果存入columnB，寫入結果columnA_Yes
+    df.loc[condition,'cloumnB']='cloumnA_Yes'
+    
+    condition = (df[cloumnA]>=1.51) & (df[cloumnA]<=2.5)  #>=1.51 & <=2.5的結果存入columnB，寫入結果columnA_No
+    df.loc[condition,'cloumnB']='cloumnA_No'
+       
+    condition = df[cloumnA]==0
+    df.loc[condition,cloumnA]='?'
+    condition = df['cloumnB']=='0'
+    df.loc[condition,'cloumnB']=np.nan
+    df[cloumnA]=df['cloumnB']                        #複製columnB 寫入A
+    df.drop('cloumnB',axis=1,inplace=True)           #drop columnB
