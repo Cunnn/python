@@ -1,0 +1,27 @@
+#cat_cols = ['race','gender','diag_1','diag_2', 'diag_3']
+#
+#class_dict = {}
+#for col in cat_cols:
+#    df_knn7 = pd.concat([df_knn7.drop(col, axis=1), pd.get_dummies(df_knn7[col])], axis=1)
+#
+#
+#df_knn7.columns = ['age', 'time_in_hospital', 'num_lab_procedures',
+#       'num_procedures', 'num_medications', 'number_outpatient',
+#       'number_emergency', 'number_inpatient', 'number_diagnoses',
+#       'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide',
+#       'chlorpropamide', 'glimepiride', 'acetohexamide', 'glipizide',
+#       'glyburide', 'tolbutamide', 'pioglitazone', 'rosiglitazone', 'acarbose',
+#       'miglitol', 'troglitazone', 'tolazamide', 'examide', 'citoglipton',
+#       'insulin', 'glyburide-metformin', 'glipizide-metformin',
+#       'glimepiride-pioglitazone', 'metformin-rosiglitazone',
+#       'metformin-pioglitazone', 'change', 'diabetesMed', 'readmitted',
+#       'AfricanAmerican', 'Asian', 'Caucasian', 'Hispanic', 'Other', 'Female',
+#       'Male', 'diag_1_Circulatory', 'diag_1_Diabetes', 'diag_1_Digestive',
+#       'diag_1_Genitourinary', 'diag_1_Injury', 'diag_1_Muscoloskeletal',
+#       'diag_1_Neoplasms', 'diag_1_Others', 'diag_1_Respiratory',
+#       'diag_2_Circulatory', 'diag_2_Diabetes', 'diag_2_Digestive',
+#       'diag_2_Genitourinary', 'diag_2_Injury', 'diag_2_Muscoloskeletal',
+#       'diag_2_Neoplasms', 'diag_2_Others', 'diag_2_Respiratory',
+#       'diag_3_Circulatory', 'diag_3_Diabetes', 'diag_3_Digestive',
+#       'diag_3_Genitourinary', 'diag_3_Injury', 'diag_3_Muscoloskeletal',
+#       'diag_3_Neoplasms', 'diag_3_Others', 'diag_3_Respiratory']
