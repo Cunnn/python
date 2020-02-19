@@ -1,3 +1,0 @@
-df.Sex.unique()
-
-array(['male', 'female'], dtype=object)

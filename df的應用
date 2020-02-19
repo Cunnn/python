@@ -1,0 +1,47 @@
+#找出欄位裡所有出現過的值
+df.Sex.unique()
+array(['male', 'female'], dtype=object)
+
+#讀取線上 CSV 檔 or 路徑
+df = pd.read_csv('http://bit.ly/kaggletrain')
+df = pd.read_csv('titanic3.csv', names = ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked','survived'])
+df.head()
+
+#查看df資訊
+df.info()  
+
+#節省記憶體
+如果讀入的 DataFrame 很大，可以只讀入特定的欄位並將已知的分類型（categorical）欄位轉成 category 型態以節省記憶體
+dtypes = {"survived": "category"}  #轉換類型
+cols = ['pclass', 'sex', 'age']  #只讀入特定欄位
+
+#合併df，格式一樣時
+from glob import glob
+df1 = pd.read_csv('titanic1.csv')
+df2 = pd.read_csv('titanic2.csv')
+files = glob("titanic*.csv")
+
+df = pd.concat([pd.read_csv(f) for f in files])
+df.reset_index(drop=True)
+
+#完整顯示所有欄位
+df = pd.util.testing.makeCustomDataframe(5, 25)  #column 5 rows x 25 columns #pandas畫面精簡
+pd.set_option("display.max_columns", None)  # max_columns 顯示全部欄位
+
+#垂直顯示所有欄位
+df.T.head()
+
+#改變浮點數顯示位數
+pd.set_option("display.precision", 1)  #顯示小數點後 1位數
+
+# fillna將 df裡頭所有不存在的值設為 0
+df.fillna(0) 
+
+#drop捨棄不需要的欄位
+df.drop('columns', axis=1) #axis =1 刪除columns , axis =0 刪除列
+
+
+
+
+
+
