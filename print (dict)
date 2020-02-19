@@ -1,0 +1,3 @@
+dict.items()可以查看所有的內容；  key + values
+dict.keys()可以查看所有的key； only keys
+dict.values()可以查看所有的value； only values
