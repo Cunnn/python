@@ -40,8 +40,8 @@ df.fillna(0)
 #drop捨棄不需要的欄位
 df.drop('columns', axis=1) #axis =1 刪除columns , axis =0 刪除列
 
-
-
+##df2內容減去df3內容 存入df4
+dr4 = df2.drop(df3.index)
 
 
 
