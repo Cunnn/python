@@ -1,0 +1,5 @@
+import os
+path = "C:\\alarm"
+if not os.path.isdir(path):
+    os.mkdir(path)
+file = open(path + "\\" + "我要開檔案.txt", "w") 
