@@ -1,6 +1,0 @@
-import pandas as pd
-
-df = pd.read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/abalone/abalone.data", names=['Sex','Length','Diameter','Height','Whole weight','Shucked weight','Viscera weight','Shell weight','Rings'])
-print('No:',df)  
-
-df.to_csv('train.csv',index=True,header=True) #寫入csv , train.csv=標題，後面True=輸出第一行加入的標題
