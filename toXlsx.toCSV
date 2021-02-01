@@ -4,3 +4,5 @@ df = pd.read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/abalo
 print('No:',df)  
 
 df.to_excel('train.xlsx',index=True,header=True) #寫入xlsx , train.xlsx=標題，後面True=輸出第一行加入的標題
+
+df.to_csv('train.csv',index=True,header=True) #寫入csv , train.csv=標題，後面True=輸出第一行加入的標題
